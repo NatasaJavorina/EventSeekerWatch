@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EventSeeker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ0-tr-tZl">
+                                <rect key="frame" x="287" y="244" width="72" height="30"/>
+                                <state key="normal" title="Buy Ticket"/>
+                                <connections>
+                                    <action selector="didPressBuyTicketWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMI-jY-ZPT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uah-qL-X7G">
+                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dso-Ak-Smx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOf-XR-Vmx">
+                                <rect key="frame" x="16" y="191.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.60690957310000004" blue="0.87302333119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0H-p2-fHv">
+                                <rect key="frame" x="16" y="156" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uah-qL-X7G" secondAttribute="trailing" constant="16" id="FKY-WX-Oiw"/>
+                            <constraint firstItem="UOf-XR-Vmx" firstAttribute="top" secondItem="V0H-p2-fHv" secondAttribute="bottom" constant="15" id="PrE-Bb-P7i"/>
+                            <constraint firstItem="V0H-p2-fHv" firstAttribute="top" secondItem="uah-qL-X7G" secondAttribute="bottom" constant="8" id="YBp-pp-utK"/>
+                            <constraint firstItem="VZ0-tr-tZl" firstAttribute="top" secondItem="UOf-XR-Vmx" secondAttribute="bottom" constant="32" id="YJH-eA-2OV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZ0-tr-tZl" secondAttribute="trailing" constant="16" id="ghf-ig-lFc"/>
+                            <constraint firstItem="uah-qL-X7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gxM-1E-htV"/>
+                            <constraint firstItem="UOf-XR-Vmx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="k4Z-2z-h84"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UOf-XR-Vmx" secondAttribute="trailing" constant="16" id="oxG-ea-rTm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V0H-p2-fHv" secondAttribute="trailing" constant="16" id="sr8-gj-mG8"/>
+                            <constraint firstItem="V0H-p2-fHv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wi9-yJ-8GO"/>
+                            <constraint firstItem="uah-qL-X7G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yVI-uj-Lze"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventImage" destination="uah-qL-X7G" id="O9x-DU-cmU"/>
+                        <outlet property="eventName" destination="V0H-p2-fHv" id="cEY-GH-zyh"/>
+                        <outlet property="textLabel" destination="UOf-XR-Vmx" id="qrF-L6-S8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
