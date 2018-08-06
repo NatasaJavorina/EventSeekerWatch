@@ -44,7 +44,7 @@ class Event {
         } else {
             date = "2018-09-08T22:15:00Z"
         }
-        
+    //comment added
    //     let date = "2018-09-08T22:15:00Z" // startDateDict["dateTime"] as! String
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
