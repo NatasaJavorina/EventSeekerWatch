@@ -67,11 +67,15 @@ class Event {
             venueCity = (venueDict["city"] as! [String: String])["name"]!
             venueAddress = (venueDict["address"] as! [String: String])["line1"]!
         
-            if let locationDict = venueDict["location"] as? [String: String] {
-                venueLat = Double(locationDict["latitude"]!)!
-                venueLong = Double(locationDict["longitude"]!)!
-            }
+//            if let locationDict = venueDict["location"] as? [String: String] {
+//                venueLat = Double(locationDict["latitude"]!)!
+//                venueLong = Double(locationDict["longitude"]!)!
+//            }
 
+            //fake location
+            venueLat = 52.2292
+            venueLong = 5.1669
+            
             if let attractionDictsArray = embededDict["attractions"] as? [[String: Any]] {
                 for dict in attractionDictsArray {
                     attractions.append(Attraction(dict: dict))
